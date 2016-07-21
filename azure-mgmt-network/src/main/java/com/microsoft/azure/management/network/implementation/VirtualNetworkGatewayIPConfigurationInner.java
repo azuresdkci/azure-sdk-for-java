@@ -8,6 +8,7 @@
 
 package com.microsoft.azure.management.network.implementation;
 
+import com.microsoft.azure.management.network.IPAllocationMethod;
 import com.microsoft.azure.SubResource;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.microsoft.rest.serializer.JsonFlatten;
@@ -28,7 +29,7 @@ public class VirtualNetworkGatewayIPConfigurationInner extends SubResource {
      * values include: 'Static', 'Dynamic'.
      */
     @JsonProperty(value = "properties.privateIPAllocationMethod")
-    private String privateIPAllocationMethod;
+    private IPAllocationMethod privateIPAllocationMethod;
 
     /**
      * Gets or sets the reference of the subnet resource.
@@ -85,7 +86,7 @@ public class VirtualNetworkGatewayIPConfigurationInner extends SubResource {
      *
      * @return the privateIPAllocationMethod value
      */
-    public String privateIPAllocationMethod() {
+    public IPAllocationMethod privateIPAllocationMethod() {
         return this.privateIPAllocationMethod;
     }
 
@@ -95,7 +96,7 @@ public class VirtualNetworkGatewayIPConfigurationInner extends SubResource {
      * @param privateIPAllocationMethod the privateIPAllocationMethod value to set
      * @return the VirtualNetworkGatewayIPConfigurationInner object itself.
      */
-    public VirtualNetworkGatewayIPConfigurationInner withPrivateIPAllocationMethod(String privateIPAllocationMethod) {
+    public VirtualNetworkGatewayIPConfigurationInner withPrivateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
         this.privateIPAllocationMethod = privateIPAllocationMethod;
         return this;
     }

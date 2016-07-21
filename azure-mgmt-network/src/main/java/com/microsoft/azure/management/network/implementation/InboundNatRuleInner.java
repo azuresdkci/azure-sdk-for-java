@@ -9,6 +9,7 @@
 package com.microsoft.azure.management.network.implementation;
 
 import com.microsoft.azure.SubResource;
+import com.microsoft.azure.management.network.TransportProtocol;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.microsoft.rest.serializer.JsonFlatten;
 
@@ -36,7 +37,7 @@ public class InboundNatRuleInner extends SubResource {
      * values are Udp or Tcp. Possible values include: 'Udp', 'Tcp'.
      */
     @JsonProperty(value = "properties.protocol")
-    private String protocol;
+    private TransportProtocol protocol;
 
     /**
      * Gets or sets the port for the external endpoint. You can spcify any
@@ -140,7 +141,7 @@ public class InboundNatRuleInner extends SubResource {
      *
      * @return the protocol value
      */
-    public String protocol() {
+    public TransportProtocol protocol() {
         return this.protocol;
     }
 
@@ -150,7 +151,7 @@ public class InboundNatRuleInner extends SubResource {
      * @param protocol the protocol value to set
      * @return the InboundNatRuleInner object itself.
      */
-    public InboundNatRuleInner withProtocol(String protocol) {
+    public InboundNatRuleInner withProtocol(TransportProtocol protocol) {
         this.protocol = protocol;
         return this;
     }

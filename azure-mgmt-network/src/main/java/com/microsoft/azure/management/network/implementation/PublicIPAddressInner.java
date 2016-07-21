@@ -8,6 +8,7 @@
 
 package com.microsoft.azure.management.network.implementation;
 
+import com.microsoft.azure.management.network.IPAllocationMethod;
 import com.microsoft.azure.management.network.PublicIPAddressDnsSettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.microsoft.rest.serializer.JsonFlatten;
@@ -23,7 +24,7 @@ public class PublicIPAddressInner extends Resource {
      * values include: 'Static', 'Dynamic'.
      */
     @JsonProperty(value = "properties.publicIPAllocationMethod")
-    private String publicIPAllocationMethod;
+    private IPAllocationMethod publicIPAllocationMethod;
 
     /**
      * The ipConfiguration property.
@@ -74,7 +75,7 @@ public class PublicIPAddressInner extends Resource {
      *
      * @return the publicIPAllocationMethod value
      */
-    public String publicIPAllocationMethod() {
+    public IPAllocationMethod publicIPAllocationMethod() {
         return this.publicIPAllocationMethod;
     }
 
@@ -84,7 +85,7 @@ public class PublicIPAddressInner extends Resource {
      * @param publicIPAllocationMethod the publicIPAllocationMethod value to set
      * @return the PublicIPAddressInner object itself.
      */
-    public PublicIPAddressInner withPublicIPAllocationMethod(String publicIPAllocationMethod) {
+    public PublicIPAddressInner withPublicIPAllocationMethod(IPAllocationMethod publicIPAllocationMethod) {
         this.publicIPAllocationMethod = publicIPAllocationMethod;
         return this;
     }

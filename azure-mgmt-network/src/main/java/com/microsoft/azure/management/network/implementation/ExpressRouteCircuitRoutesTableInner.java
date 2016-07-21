@@ -8,6 +8,7 @@
 
 package com.microsoft.azure.management.network.implementation;
 
+import com.microsoft.azure.management.network.RouteNextHopType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -24,7 +25,7 @@ public class ExpressRouteCircuitRoutesTableInner {
      * 'VnetLocal', 'Internet', 'VirtualAppliance', 'None'.
      */
     @JsonProperty(required = true)
-    private String nextHopType;
+    private RouteNextHopType nextHopType;
 
     /**
      * Gets NextHopIP.
@@ -61,7 +62,7 @@ public class ExpressRouteCircuitRoutesTableInner {
      *
      * @return the nextHopType value
      */
-    public String nextHopType() {
+    public RouteNextHopType nextHopType() {
         return this.nextHopType;
     }
 
@@ -71,7 +72,7 @@ public class ExpressRouteCircuitRoutesTableInner {
      * @param nextHopType the nextHopType value to set
      * @return the ExpressRouteCircuitRoutesTableInner object itself.
      */
-    public ExpressRouteCircuitRoutesTableInner withNextHopType(String nextHopType) {
+    public ExpressRouteCircuitRoutesTableInner withNextHopType(RouteNextHopType nextHopType) {
         this.nextHopType = nextHopType;
         return this;
     }
